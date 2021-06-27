@@ -1,0 +1,18 @@
+<html>
+   <body>
+      <h2>Validate Plaintiff(s) and Defendant(s)</h2>
+      {% if plaintiff == "" and defendant == "" %}
+         <p>Please manually enter the information</p>
+      {% endif %}
+      <form action="{{ url_for('confirmation') }}" method="POST" 
+         enctype="multipart/form-data">
+         <label for="plaintiff">Plaintiff:</label><br>
+         <input type="text" id="plaintiff" name="plaintiff" style="width: 500px" value="{{ plaintiff }}"><br><br>
+         <label for="defendant">Defendant:</label><br>
+         <input type="text" id="defendant" name="defendant" style="width: 500px" value="{{ defendant }}"><br><br>
+         <input type="submit"/>
+      </form> 
+      <br><br>
+      <a href = "/">Choose a different file</a>
+   </body>
+</html>

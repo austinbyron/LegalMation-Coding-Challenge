@@ -1,0 +1,14 @@
+<html>
+   <body>
+      <h2>Upload xml file to parse for Plaintiff(s) and Defendant(s)</h2>
+      <form action="{{ url_for('process_file') }}" method="POST" 
+         enctype="multipart/form-data">
+         <input type="file" name="file" accept=".xml"/><br><br>
+         <input type="checkbox" id="json" name="json" value="View results as JSON">
+         <label for="json">View results as JSON</label><br><br>
+         <input type="submit"/>
+      </form>
+      <br>
+      <a href = "/records">View all records</a>
+   </body>
+</html>

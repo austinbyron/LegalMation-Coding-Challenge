@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+   <body>
+      <h2>Records of extracted plaintiff(s) and defendant(s)</h2>
+      <table border="1px">
+         <thead>
+            <td>Document ID</td>
+            <td>Plaintiff</td>
+            <td>Defendant</td>
+            <td>Date Added (ISO Timestamp)</td>
+         </thead>
+         
+         {% for record in records %}
+            <tr>
+               <td>{{ record["docid"] }}</td>
+               <td>{{ record["plaintiff"] }}</td>
+               <td>{{ record["defendant"] }}</td>
+               <td>{{ record["date"] }}</td>	
+            </tr>
+         {% endfor %}
+      </table>
+      <br><br>
+      <a href = "/">Add another entry</a>
+      
+   </body>
+</html>
