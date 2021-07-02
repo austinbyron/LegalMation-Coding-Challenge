@@ -6,8 +6,8 @@ You can use curl commands to access these endpoints:
 
 - This command uploads xml file you choose, parses the document for the plaintiff(s) and defendant(s), and then adds those plaintiff(s) and defendant(s) to the database.
 
-Example:
-`
+Example:  
+```
 {
     "links": {
         "self": "http://127.0.0.1:5000/process", 
@@ -28,15 +28,15 @@ Example:
         }
     ]
 }
-`
+```
 
 ### 'curl http://127.0.0.1:5000/records.json'
 
 - This command pulls all of the rows/records from the database and returns them in JSON format to allow users to view previous documents that have been entered in hte database.
     - Each row contains a document ID, the plaintiffs' names, the defendants' names, and the timestamp for when that particular row was added to the database.
 
-Example:
-`
+Example:  
+```
 {
     "links": {
         "self": "http://127.0.0.1:5000/records.json"
@@ -80,4 +80,4 @@ Example:
         }
     ]
 }
-`
+```
