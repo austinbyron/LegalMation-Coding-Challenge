@@ -16,6 +16,7 @@
 
 
 ## Curl Commands
+*See the documentation.md file for more information on these curl commands*  
 - Add a file to the database -> 'curl -X POST -F 'file=@<path/to/file.xml>' -F 'json=on' http://127.0.0.1:5000/process'
     - Returns the parsed plaintiff(s) and defendant(s) from the file and adds them to the database
 - View the database as JSON -> 'curl http://127.0.0.1:5000/records.json'
